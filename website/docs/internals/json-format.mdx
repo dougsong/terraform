@@ -441,6 +441,14 @@ Because the configuration models are produced at a stage prior to expression eva
         // itself, using the same structure as the "root_module" object,
         // recursively describing the full module tree.
         "module": <module-configuration-representation>,
+
+        // "providers" is a map of provider aliases, as defined in the child
+        // module, to provider configurations, as defined in the root module and
+        // the "provider_configs" map above.
+        "providers": {
+          "aws": "aws",
+          "aws.secondary": "aws.foo"
+        },
       }
     }
   }
